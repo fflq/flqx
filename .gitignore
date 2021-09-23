@@ -1,3 +1,9 @@
+# flq
+*.img
+*.map
+.*.swp
+
+
 # Prerequisites
 *.d
 
