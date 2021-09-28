@@ -21,9 +21,12 @@ Image: boot.s
 	dd bs=512 if=head of=floppy.img seek=1
 	sync
 
+run: 
+	bochs -qf ./flqx-0.0.bxrc
+
 disk: Image
 	dd bs=8192 if=Image of=/dev/fd0
-	sync;sync;sync
+	sync
 
 clean:
 	rm -f Image System.map core boot head *.o system
